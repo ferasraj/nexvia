@@ -1,0 +1,99 @@
+{
+    "Home": {
+        "title": "Own the Next Move",
+        "subtitle": "Tell us what you need. We'll handle the rest."
+    },
+    "Navbar": {
+        "home": "Home",
+        "rent": "Rent",
+        "buy": "Buy",
+        "projects": "Projects",
+        "listProperty": "List Property",
+        "contact": "Contact"
+    },
+    "Pages": {
+        "rent": {
+            "title": "Rent with Nexvia",
+            "description": "Tell us what you need, and we'll help you find the right rental property."
+        },
+        "buy": {
+            "title": "Buy with Confidence",
+            "description": "Explore smarter buying options with guidance from Nexvia."
+        },
+        "projects": {
+            "title": "Developer Projects",
+            "description": "Discover selected real estate projects from trusted developers."
+        },
+        "listProperty": {
+            "title": "List Your Property",
+            "description": "Share your property details, and our team will contact you."
+        },
+        "contact": {
+            "title": "Contact Nexvia",
+            "description": "Reach out to us for rentals, buying, projects, or listing your property."
+        }
+    },
+    "ProjectDetails": {
+        "developer": "Developer",
+        "location": "Location",
+        "type": "Type",
+        "startingPrice": "Starting Price",
+        "area": "Area",
+        "features": "Features",
+        "paymentPlans": "Payment Plans"
+    },
+    "Footer": {
+        "tagline": "Modern real estate marketing built around trust and smarter decisions.",
+        "quickLinks": "Quick Links",
+        "home": "Home",
+        "rent": "Rent",
+        "buy": "Buy",
+        "projects": "Projects",
+        "listProperty": "List Property",
+        "contact": "Contact",
+        "contactTitle": "Contact",
+        "address": "Cairo, Egypt",
+        "phone": "+20 111 796 2222",
+        "email": "info@nexvia.com",
+        "hours": "Sun - Thu: 9AM - 5PM",
+        "newsletter": "Newsletter",
+        "newsletterText": "Get exclusive property deals and updates.",
+        "emailPlaceholder": "Enter your email",
+        "subscribeButton": "Subscribe",
+        "subscribeSuccess": "Subscribed successfully!",
+        "rights": "All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "Hero": {
+        "eyebrow": "Nexvia Real Estate Solutions",
+        "title": "Own the Next Move.",
+        "description": "Premium real estate marketing, rentals, and property listings in Egypt — built for buyers, owners, and developers.",
+        "primaryCta": "Explore Projects",
+        "secondaryCta": "List Your Property"
+    },
+    "RentPage": {
+        "eyebrow": "Premium Rentals",
+        "title": "Discover Exceptional Rental Residences with Nexvia",
+        "description": "Explore a curated portfolio of premium residential, administrative, and commercial properties for rent across Egypt’s most prestigious destinations.",
+        "searchLocation": "Search by location",
+        "propertyType": "Property type",
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "studio": "Studio",
+        "budget": "Budget",
+        "search": "Search",
+        "featured": "Featured Rentals",
+        "featuredTitle": "Curated Rental Properties",
+        "featuredDescription": "A handpicked selection of rental homes designed for comfort, location, and lifestyle.",
+        "trustTitle": "Verified Listings",
+        "trustText": "Every rental is reviewed to help you avoid wasted time and unreliable listings.",
+        "fastTitle": "Fast Response",
+        "fastText": "Connect quickly with our team and get matched with suitable rental options.",
+        "easyTitle": "Smooth Process",
+        "easyText": "From search to viewing, Nexvia makes renting simpler and more transparent.",
+        "ctaTitle": "Looking for a Specific Rental?",
+        "ctaText": "Tell us your preferred location, budget, and property type. We’ll help you find the right match.",
+        "ctaButton": "Contact Us"
+    }
+}
