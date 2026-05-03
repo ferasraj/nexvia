@@ -2,13 +2,16 @@
 
 function StatBox({ number, suffix, label }) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:-translate-y-1 hover:border-blue-500/40">
-      <p className="text-4xl font-bold text-blue-400">
+    <div className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-blue-500/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]">
+      <p className="text-4xl font-bold text-blue-400 transition group-hover:text-blue-300">
+        {" "}
         {number}
         {suffix}
       </p>
 
-      <p className="mt-2 text-sm text-white/60">{label}</p>
+      <p className="mt-2 text-sm text-white/60 transition group-hover:text-white/80">
+        {label}
+      </p>
     </div>
   );
 }

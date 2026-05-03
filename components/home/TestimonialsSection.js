@@ -77,7 +77,7 @@ export default function TestimonialsSection({ locale }) {
           {testimonials.map((item, index) => (
             <article
               key={index}
-              className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-blue-500/40"
+              className="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-blue-500/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]"
             >
               <div className="mb-6 flex items-center gap-4">
                 <div className="relative h-14 w-14 overflow-hidden rounded-full border border-blue-500/30">
@@ -92,7 +92,8 @@ export default function TestimonialsSection({ locale }) {
 
                 <div>
                   <h3 className="font-bold text-white">{item.name[locale]}</h3>
-                  <p className="mt-1 text-sm text-white/50">
+                  <p className="mt-1 text-sm text-white/50 transition group-hover:text-white/70">
+                    {" "}
                     {item.role[locale]}
                   </p>
                 </div>
@@ -100,7 +101,8 @@ export default function TestimonialsSection({ locale }) {
 
               <div className="mb-4 flex gap-1 text-blue-400">{"★★★★★"}</div>
 
-              <p className="text-sm leading-7 text-white/65">
+              <p className="text-sm leading-7 text-white/65 transition group-hover:text-white/80">
+                {" "}
                 “{item.quote[locale]}”
               </p>
             </article>

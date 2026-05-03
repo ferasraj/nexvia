@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Home, Key, Building2, UploadCloud } from "lucide-react";
 
@@ -87,21 +89,21 @@ export default function ServicesSection({ locale }) {
             <Link
               key={service.key}
               href={`/${locale}/${service.href}`}
-              className="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-blue-500/40"
+              className="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/[0.07] hover:border-blue-500/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]"
             >
-              <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 text-blue-400 backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:bg-blue-500/20 group-hover:text-blue-300">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 text-blue-400 shadow-lg shadow-blue-500/10 backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:border-blue-400/40 group-hover:bg-blue-500/25 group-hover:text-blue-200 group-hover:shadow-[0_0_22px_rgba(59,130,246,0.35)]">
                 <service.icon size={22} strokeWidth={1.8} />
               </div>
 
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl font-bold text-white transition group-hover:text-blue-300">
                 {service[locale].title}
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-white/55">
+              <p className="mt-3 text-sm leading-6 text-white/55 transition group-hover:text-white/75">
                 {service[locale].desc}
               </p>
 
-              <span className="mt-6 inline-flex text-sm font-semibold text-blue-400">
+              <span className="mt-6 inline-flex text-sm font-semibold text-blue-400 transition group-hover:text-blue-300">
                 {locale === "ar" ? "اعرف المزيد" : "Learn more"}
               </span>
             </Link>

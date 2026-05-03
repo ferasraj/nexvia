@@ -12,6 +12,7 @@ import {
   FaKey,
   FaBuilding,
 } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
 
 export default async function RentPage({ params }) {
   const { locale } = await params;
@@ -270,14 +271,19 @@ export default async function RentPage({ params }) {
             return (
               <div
                 key={index}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-8"
+                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 hover:bg-white/[0.07] hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600/20 text-blue-300">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 text-blue-400 shadow-lg shadow-blue-500/10 backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:border-blue-400/40 group-hover:bg-blue-500/25 group-hover:text-blue-200 group-hover:shadow-[0_0_22px_rgba(59,130,246,0.35)]">
                   <Icon />
                 </div>
 
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-4 leading-7 text-gray-400">{item.text}</p>
+                <h3 className="text-xl font-bold text-white transition group-hover:text-blue-300">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-400 transition group-hover:text-white/75">
+                  {item.text}
+                </p>
               </div>
             );
           })}
@@ -293,9 +299,13 @@ export default async function RentPage({ params }) {
 
           <Link
             href={`/${locale}/contact`}
-            className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-bold text-[#050814] transition hover:bg-blue-100"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-bold text-[#050814] transition duration-300 hover:-translate-y-0.5 hover:bg-blue-500 hover:text-white"
           >
             {t("ctaButton")}
+            {/* <ArrowUpRight
+              className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
+              size={18}
+            /> */}
           </Link>
         </div>
       </section>
