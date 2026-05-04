@@ -16,18 +16,20 @@ export default function Hero({ locale }) {
           backgroundImage:
             "url('https://images.unsplash.com/photo-1486607303850-bc051a4ffad4?q=80&w=1174&auto=format&fit=crop')",
         }}
+        aria-hidden="true"
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
 
-      {/* Gradient Overlay (RTL / LTR) */}
+      {/* Gradient Overlay */}
       <div
         className={`absolute inset-0 ${
           isRTL
             ? "bg-gradient-to-l from-[#0B0F19]/95 via-[#0B0F19]/80 to-transparent"
             : "bg-gradient-to-r from-[#0B0F19]/95 via-[#0B0F19]/80 to-transparent"
         }`}
+        aria-hidden="true"
       />
 
       {/* Content */}
@@ -38,7 +40,7 @@ export default function Hero({ locale }) {
             {t("eyebrow")}
           </p>
 
-          {/* Title */}
+          {/* 🔥 H1 (مهم جدًا للسيو) */}
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             {t("title")}
           </h1>
@@ -53,6 +55,7 @@ export default function Hero({ locale }) {
             <Link
               href={`/${locale}/projects`}
               className="w-full sm:w-auto rounded-2xl bg-blue-600 px-7 py-4 text-center text-sm font-semibold text-white shadow-lg shadow-blue-600/30 transition duration-300 hover:scale-[1.02] hover:bg-blue-500"
+              aria-label="Browse real estate projects"
             >
               {t("primaryCta")}
             </Link>
@@ -60,6 +63,7 @@ export default function Hero({ locale }) {
             <Link
               href={`/${locale}/list-property`}
               className="w-full sm:w-auto rounded-2xl border border-white/20 bg-white/10 px-7 py-4 text-center text-sm font-semibold text-white backdrop-blur transition duration-300 hover:scale-[1.02] hover:bg-white/20"
+              aria-label="List your property"
             >
               {t("secondaryCta")}
             </Link>

@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const pathname = usePathname();
   const locale = pathname.split("/")[1] || "en";
   const t = useTranslations("Navbar");
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -31,7 +32,12 @@ export default function Navbar() {
         dir={locale === "ar" ? "rtl" : "ltr"}
         className="fixed left-0 top-0 z-[9999] w-full px-4 pt-4 sm:px-6 lg:px-8"
       >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-[#0B0F19]/60 px-4 py-3 shadow-2xl backdrop-blur-xl sm:px-6">
+        {/* 🔥 SEO fix هنا */}
+        <nav
+          role="navigation"
+          aria-label="Main Navigation"
+          className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-[#0B0F19]/60 px-4 py-3 shadow-2xl backdrop-blur-xl sm:px-6"
+        >
           <Link
             href={`/${locale}`}
             onClick={scrollToTop}
@@ -77,29 +83,18 @@ export default function Navbar() {
           </div>
         </nav>
       </header>
-      {/* Mobile Minu */}
 
+      {/* Mobile Menu */}
       <div
         dir={locale === "ar" ? "rtl" : "ltr"}
         className="pointer-events-none fixed inset-0 z-[10000] bg-[#050814]/50 opacity-0 backdrop-blur-xl transition duration-300 peer-checked:pointer-events-auto peer-checked:opacity-100 lg:hidden"
       >
-        {/* Click outside to close */}
+        {/* Click outside */}
         <label
           htmlFor="mobile-menu-toggle"
           aria-label="Close menu overlay"
           className="absolute inset-0 z-[10] cursor-pointer"
         />
-
-        {/* Close Button */}
-        {/* <label
-          htmlFor="mobile-menu-toggle"
-          aria-label="Close menu"
-          className={`absolute top-6 z-[30] flex h-12 w-12 cursor-pointer touch-manipulation items-center justify-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md active:scale-95 ${
-            locale === "ar" ? "left-6" : "right-6"
-          }`}
-        >
-          <FaTimes className="pointer-events-none text-xl" />
-        </label> */}
 
         {/* Links */}
         <div className="pointer-events-none relative z-[20] flex h-full flex-col items-center justify-center gap-6 text-center">
@@ -109,15 +104,17 @@ export default function Navbar() {
               htmlFor="mobile-menu-toggle"
               className="pointer-events-auto cursor-pointer"
             >
+              {/* 🔥 UX FIX هنا */}
               <Link
                 href={link.href}
+                onClick={scrollToTop}
                 className="text-2xl font-semibold text-white transition hover:text-blue-400"
               >
                 {link.label}
               </Link>
             </label>
           ))}
-          {/* Language Switcher */}
+
           <label
             htmlFor="mobile-menu-toggle"
             className="pointer-events-auto cursor-pointer mt-8"

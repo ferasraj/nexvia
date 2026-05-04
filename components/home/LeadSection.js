@@ -21,6 +21,7 @@ export default function LeadSection({ locale }) {
   return (
     <section className="bg-[#050814] px-4 py-20 text-white">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        {/* Left Content */}
         <div>
           <span className="mb-3 inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300">
             {isAr ? "ابدأ الآن" : "Start Your Journey"}
@@ -39,14 +40,16 @@ export default function LeadSection({ locale }) {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
+            {/* 🔥 WhatsApp Primary Button */}
             <Link
               href={`https://wa.me/201108099414?text=${whatsappText}`}
               target="_blank"
-              className="inline-flex rounded-full bg-blue-600 px-7 py-4 text-sm font-bold text-white transition hover:bg-blue-500"
+              className="inline-flex rounded-full border border-white/15 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-[#25D366] hover:text-white"
             >
               {isAr ? "تواصل عبر واتساب" : "Chat on WhatsApp"}
             </Link>
 
+            {/* Secondary Button */}
             <Link
               href={`/${locale}/contact`}
               className="inline-flex rounded-full border border-white/15 px-7 py-4 text-sm font-bold text-white transition hover:border-blue-400 hover:text-blue-300"
@@ -56,8 +59,10 @@ export default function LeadSection({ locale }) {
           </div>
         </div>
 
+        {/* Form */}
         <form className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/20">
           <div className="grid gap-4">
+            {/* Name */}
             <div>
               <label className="mb-2 block text-sm text-white/60">
                 {isAr ? "الاسم" : "Name"}
@@ -73,6 +78,7 @@ export default function LeadSection({ locale }) {
               />
             </div>
 
+            {/* Phone */}
             <div>
               <label className="mb-2 block text-sm text-white/60">
                 {isAr ? "رقم الهاتف" : "Phone number"}
@@ -88,6 +94,7 @@ export default function LeadSection({ locale }) {
               />
             </div>
 
+            {/* Select */}
             <div>
               <label className="mb-2 block text-sm text-white/60">
                 {isAr ? "ما الذي تبحث عنه؟" : "What are you looking for?"}
@@ -117,10 +124,11 @@ export default function LeadSection({ locale }) {
               </select>
             </div>
 
+            {/* 🔥 WhatsApp Submit */}
             <Link
               href={`https://wa.me/201108099414?text=${whatsappText}`}
               target="_blank"
-              className="mt-2 inline-flex w-full justify-center rounded-full bg-white px-6 py-4 text-sm font-bold text-[#050814] transition hover:bg-blue-500 hover:text-white"
+              className="mt-2 inline-flex w-full justify-center rounded-full bg-white px-6 py-4 text-sm font-bold text-[#050814] transition hover:bg-[#25D366] hover:text-white"
             >
               {isAr ? "إرسال عبر واتساب" : "Send via WhatsApp"}
             </Link>

@@ -27,20 +27,25 @@ export default function Footer() {
     { label: isAr ? "تواصل معنا" : "Contact", href: `/${locale}/contact` },
   ];
 
+  // 🔥 عدلنا الروابط
   const socialLinks = [
-    { icon: FaFacebookF, href: "#", label: "Facebook" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
-    { icon: FaYoutube, href: "#", label: "YouTube" },
-    { icon: FaSnapchatGhost, href: "#", label: "Snapchat" },
+    { icon: FaFacebookF, href: "https://facebook.com/", label: "Facebook" },
+    { icon: FaInstagram, href: "https://instagram.com/", label: "Instagram" },
+    { icon: FaYoutube, href: "https://youtube.com/", label: "YouTube" },
+    { icon: FaSnapchatGhost, href: "https://snapchat.com/", label: "Snapchat" },
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#050814] px-4 pt-14 text-white">
+    <footer
+      role="contentinfo"
+      className="relative overflow-hidden border-t border-white/10 bg-[#050814] px-4 pt-14 text-white"
+    >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
       <div className="pointer-events-none absolute -top-40 end-0 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.75fr_0.95fr_1.05fr]">
+          {/* Logo + Description */}
           <div>
             <Link
               href={`/${locale}`}
@@ -70,6 +75,7 @@ export default function Footer() {
                     key={item.label}
                     href={item.href}
                     aria-label={item.label}
+                    target="_blank"
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-white/55 transition duration-300 hover:-translate-y-0.5 hover:border-blue-500/40 hover:bg-blue-500/10 hover:text-blue-300"
                   >
                     <Icon size={17} />
@@ -79,6 +85,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Links */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.28em] text-white/70">
               {isAr ? "روابط" : "Links"}
@@ -102,29 +109,44 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* 🔥 Contact (معدل) */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.28em] text-white/70">
               {isAr ? "تواصل" : "Contact"}
             </h3>
 
             <div className="mt-5 space-y-4 text-sm text-white/55">
-              <p className="flex items-start gap-3">
-                <MapPin className="mt-0.5 shrink-0 text-blue-400" size={18} />
-                <span>{isAr ? "القاهرة، مصر" : "Cairo, Egypt"}</span>
-              </p>
+              <address className="not-italic space-y-4">
+                <p className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 shrink-0 text-blue-400" size={18} />
+                  <span>{isAr ? "القاهرة، مصر" : "Cairo, Egypt"}</span>
+                </p>
 
-              <p className="flex items-start gap-3">
-                <Phone className="mt-0.5 shrink-0 text-blue-400" size={18} />
-                <span dir="ltr">+20 110 809 9414</span>
-              </p>
+                <p className="flex items-start gap-3">
+                  <Phone className="mt-0.5 shrink-0 text-blue-400" size={18} />
+                  <a
+                    href="tel:+201108099414"
+                    className="hover:text-blue-300"
+                    dir="ltr"
+                  >
+                    +20 110 809 9414
+                  </a>
+                </p>
 
-              <p className="flex items-start gap-3">
-                <Mail className="mt-0.5 shrink-0 text-blue-400" size={18} />
-                <span>info@nexvia.com</span>
-              </p>
+                <p className="flex items-start gap-3">
+                  <Mail className="mt-0.5 shrink-0 text-blue-400" size={18} />
+                  <a
+                    href="mailto:info@nexvia.com.eg"
+                    className="hover:text-blue-300"
+                  >
+                    info@nexvia.com.eg
+                  </a>
+                </p>
+              </address>
             </div>
           </div>
 
+          {/* Newsletter */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-5 shadow-2xl shadow-black/20 backdrop-blur-sm">
             <h3 className="text-xl font-bold">
               {isAr ? "اشترك في التحديثات" : "Stay updated"}
@@ -153,6 +175,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 py-5 text-sm text-white/40 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} Nexvia.{" "}

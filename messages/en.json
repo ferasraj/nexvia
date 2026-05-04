@@ -53,8 +53,8 @@
         "contact": "Contact",
         "contactTitle": "Contact",
         "address": "Cairo, Egypt",
-        "phone": "+20 111 796 2222",
-        "email": "info@nexvia.com",
+        "phone": "+20 110 809 9414",
+        "email": "info@nexvia.com.eg",
         "hours": "Sun - Thu: 9AM - 5PM",
         "newsletter": "Newsletter",
         "newsletterText": "Get exclusive property deals and updates.",
@@ -67,8 +67,8 @@
     },
     "Hero": {
         "eyebrow": "Nexvia Real Estate Solutions",
-        "title": "Own the Next Move.",
-        "description": "Premium real estate marketing, rentals, and property listings in Egypt — built for buyers, owners, and developers.",
+        "title": "Find Your Next Property in Egypt.",
+        "description": "Premium real estate marketing, rentals, sales, and developer projects in Egypt — built for buyers, owners, tenants, and developers.",
         "primaryCta": "Explore Projects",
         "secondaryCta": "List Your Property"
     },

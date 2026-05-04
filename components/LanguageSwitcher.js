@@ -9,10 +9,10 @@ export default function LanguageSwitcher() {
   const currentLocale = pathname.startsWith("/ar") ? "ar" : "en";
   const targetLocale = currentLocale === "ar" ? "en" : "ar";
 
-  const redirectedPathname = pathname.replace(
-    `/${currentLocale}`,
-    `/${targetLocale}`,
-  );
+  const redirectedPathname =
+    pathname === "/"
+      ? `/${targetLocale}`
+      : pathname.replace(`/${currentLocale}`, `/${targetLocale}`);
 
   return (
     <Link
