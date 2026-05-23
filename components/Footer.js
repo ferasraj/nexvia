@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaSnapchatGhost,
+  FaTiktok,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -33,6 +34,7 @@ export default function Footer() {
     { icon: FaInstagram, href: "https://instagram.com/", label: "Instagram" },
     { icon: FaYoutube, href: "https://youtube.com/", label: "YouTube" },
     { icon: FaSnapchatGhost, href: "https://snapchat.com/", label: "Snapchat" },
+    { icon: FaTiktok, href: "https://nexvia.com.eg", label: "TikTok" },
   ];
 
   return (
@@ -119,7 +121,16 @@ export default function Footer() {
               <address className="not-italic space-y-4">
                 <p className="flex items-start gap-3">
                   <MapPin className="mt-0.5 shrink-0 text-blue-400" size={18} />
-                  <span>{isAr ? "القاهرة، مصر" : "Cairo, Egypt"}</span>
+                  <a
+                    href="https://maps.google.com/?q=101+Abdulaziz+Al+Saud+Al+Manyal+Old+Cairo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-300"
+                  >
+                    {isAr
+                      ? "101 شارع عبدالعزيز آل سعود، المنيل، القاهرة"
+                      : "101 Abdulaziz Al Saud St, Al Manyal, Cairo"}
+                  </a>{" "}
                 </p>
 
                 <p className="flex items-start gap-3">
