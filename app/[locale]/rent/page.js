@@ -12,6 +12,7 @@ import {
   FaKey,
   FaBuilding,
 } from "react-icons/fa";
+import CustomSelect from "@/components/CustomSelect";
 import { ArrowUpRight } from "lucide-react";
 
 export default async function RentPage({ params }) {
@@ -139,30 +140,41 @@ export default async function RentPage({ params }) {
           </p>
 
           {/* Search Box */}
-          <div className="mx-auto mt-10 grid max-w-5xl gap-3 rounded-3xl border border-white/10 bg-white/10 p-3 backdrop-blur-xl md:grid-cols-[1.2fr_1fr_1fr_auto]">
+          <div className="mx-auto mt-10 grid max-w-5xl gap-3 rounded-3xl border border-white/10 bg-white/10 p-3 text-start backdrop-blur-xl md:grid-cols-[1.2fr_1fr_1fr_auto]">
             <input
               placeholder={t("searchLocation")}
               className="rounded-2xl border border-white/10 bg-[#050814]/70 px-5 py-4 text-sm text-white outline-none placeholder:text-gray-400"
             />
 
-            <select className="rounded-2xl border border-white/10 bg-[#050814]/70 px-5 py-4 text-sm text-gray-300 outline-none">
-              <option>{t("propertyType")}</option>
-              <option>{isAr ? "سكني" : "Residential"}</option>
-              <option>{t("apartment")}</option>
-              <option>{t("villa")}</option>
-              <option>{t("studio")}</option>
-              <option>{isAr ? "إداري" : "Administrative"}</option>
-              <option>{isAr ? "تجاري" : "Commercial"}</option>
-              <option>{isAr ? "طبي" : "Medical"}</option>
-              <option>{isAr ? "فندقي" : "Serviced / Hotel"}</option>
-            </select>
+            <CustomSelect
+              instanceId="rent-property-type"
+              isAr={isAr}
+              placeholder={t("propertyType")}
+              options={[
+                { value: "residential", label: isAr ? "سكني" : "Residential" },
+                {
+                  value: "administrative",
+                  label: isAr ? "إداري" : "Administrative",
+                },
+                { value: "commercial", label: isAr ? "تجاري" : "Commercial" },
+                { value: "medical", label: isAr ? "طبي" : "Medical" },
+                {
+                  value: "serviced",
+                  label: isAr ? "فندقي" : "Serviced / Hotel",
+                },
+              ]}
+            />
 
-            <select className="rounded-2xl border border-white/10 bg-[#050814]/70 px-5 py-4 text-sm text-gray-300 outline-none">
-              <option>{t("budget")}</option>
-              <option>10k - 25k</option>
-              <option>25k - 50k</option>
-              <option>50k+</option>
-            </select>
+            <CustomSelect
+              instanceId="rent-budget"
+              isAr={isAr}
+              placeholder={t("budget")}
+              options={[
+                { value: "10k-25k", label: "10k - 25k" },
+                { value: "25k-50k", label: "25k - 50k" },
+                { value: "50k-plus", label: "50k+" },
+              ]}
+            />
 
             <button className="flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-blue-500">
               <FaSearch />
