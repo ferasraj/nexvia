@@ -95,5 +95,28 @@
         "ctaTitle": "Looking for a Specific Rental?",
         "ctaText": "Tell us your preferred location, budget, and property type. We’ll help you find the right match.",
         "ctaButton": "Contact Us"
+    },
+    "BuyPage": {
+        "eyebrow": "Premium Properties",
+        "title": "Find Your Next Property Investment",
+        "description": "Discover luxury apartments, villas, commercial spaces, and investment opportunities across Egypt’s top locations.",
+        "searchLocation": "Search by location",
+        "propertyType": "Property Type",
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "budget": "Budget",
+        "search": "Search",
+        "featured": "Featured Properties",
+        "featuredTitle": "Exclusive Properties For Sale",
+        "featuredDescription": "Explore handpicked premium properties designed for modern living and smart investment opportunities.",
+        "trustTitle": "Trusted Real Estate Experts",
+        "trustText": "We help you find verified properties with complete transparency and professional guidance.",
+        "fastTitle": "Fast & Smooth Process",
+        "fastText": "From searching to closing the deal, we make the buying experience simple and efficient.",
+        "easyTitle": "Easy Ownership Journey",
+        "easyText": "Whether you're buying your first home or investing, Nexvia makes ownership easier than ever.",
+        "ctaTitle": "Own Your Next Property With Nexvia",
+        "ctaText": "Connect with our team today and discover premium real estate opportunities tailored to your goals.",
+        "ctaButton": "Contact Us"
     }
 }
